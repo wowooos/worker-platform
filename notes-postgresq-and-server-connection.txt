@@ -1,0 +1,3 @@
+- npm install pg cors
+    - added as dependencies in [package.json]
+- connection pool (?)

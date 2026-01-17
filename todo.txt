@@ -1,0 +1,16 @@
+[] fix databse encoding
+    - JoÃ£o; browser and postman
+    - Jo├úo; database
+    - insertions test:
+        - with postman, it is possible to send proper UTF-8 data — João is shown with accent mark, all perfect.
+        - inserting directly via psql, the name "João" is saved without accent mark, but I can fetch for it and receive de correct data — so I didn't understand if this is really a problem (João being saved as Joao).
+[x] fix SQL Injection vulnerability
+    - do not put variables directly into SQL code
+    - replace it for Parameterized Queries
+        - in the POST request: `INSERT INTO worker (first_name, last_name, service, phone, gender, date_of_birth, description) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *`, [first_name, last_name, service, phone, gender, date_of_birth, description]
+        - instead of: `INSERT INTO worker (first_name, last_name, service, phone, gender, date_of_birth, description) VALUES (${first_name}, ${last_name}, ${service}, ${phone}, ${gender}, ${date_of_birth}, ${description}) RETURNING *`
+[x] creating a post request on postman -> testing the POST route on the backend (server.js) -> adding worker
+    - headers -> key: content type, value: application/json
+    - body -> raw, JSON -> {"first_name": ..., "last_name": ..., "service": ..., "phone": ..., "gender": ..., "date_of_birth": ..., "description": ...}
+[] fix the database name's accentuation -> just so i can use it effectively when testing sql queries
+    - i think i do this by NOT inserting the data via PSQL, instead via somewhere else like postman 

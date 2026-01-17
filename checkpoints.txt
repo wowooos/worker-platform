@@ -1,0 +1,22 @@
+- template engine
+    - pug
+    - ejs
+
+backend:
+[] routing
+[] how to handle requests
+    [] request and response cycle
+    [] request/response objects
+        [] how we can get the response body
+        [] how we can get the headers
+[] custom middleware
+    [] custom logging middleware
+[] CRUD operations
+    [] create a full CRUD API — JSON API
+[] template engines
+[] error handling  
+    [] custom error handling middleware
+[] 3rd party NPM packages
+[] controllers
+[] fetching data from the frontend
+[] environment variables

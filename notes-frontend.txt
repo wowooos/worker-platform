@@ -1,0 +1,43 @@
+- creating a new react app using vite:
+    worker-platform => npm create vite@latest
+- devDependencies: only used for development, not deployed with the application on the future.
+- JSX: JavaScript XML
+    - babeljs.io
+
+- npm install tailwindcss @tailwindcss/vite
+- npm install axios
+
+- npm install bootstrap
+
+-----------------------------------------------------------------------------------------------------
+
+[] building components
+[] rendering markup with JSX
+[] managing state
+[] passing input via props
+[] debugging react apps
+
+[] install react developer tools
+-----------------------------------------------------------------------------------------------------
+
+- components
+- props
+- state
+- hooks
+- data fetching
+- react router
+
+-----------------------------------------------------------------------------------------------------
+
+- to define [state] in a >functional component< you can use a [hook]
+    - useState hook -> a built-in react hook
+
+-----------------------------------------------------------------------------------------------------
+
+- AddWorkerForm.jsx 
+    1. event.preventDefault(); -> what exactly this does?
+    2. {...formData, [key]:value} --> how does it work? --> if you try to just spread an object, it doesn't work.
+    3. return -> retorna para onde?
+
+    [x] tratamento para quando o serviço for inválido -> limpar apenas o serviço
+    [x] tratamento para quando o telefone for inválido -> limpar apenas o telefone

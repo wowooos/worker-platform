@@ -1,0 +1,32 @@
+- add [psql] to the PATH later
+- using SQL shell for now
+
+commands:
+- creating my first database:  
+    - CREATE DATABASE worker_platform;
+- deleting a database:
+    - DROP DATABASE worker_platform;
+
+- creating my first table:
+    - CREATE TABLE worker (
+        id BIGSERIAL NOT NULL PRIMARY KEY,
+        first_name VARCHAR(50) NOT NULL,
+        last_name VARCHAR(50) NOT NULL,
+        service VARCHAR(50) NOT NULL,
+        phone VARCHAR(50) NOT NULL,
+        gender VARCHAR(10) NOT NULL,
+        date_of_birth DATE NOT NULL,
+        description TEXT
+    );
+- deleting a table:
+    - DROP TABLE worker
+
+
+- [#worker_platform: \d]
+    - a table of all the tables I've created into [worker_platform] database 
+- [#worker_platform: \d workers]
+    - a table of the features of my [workers] table
+-------------
+
+stopped at: 01:12, Select From
+https://www.youtube.com/watch?v=qw--VYLpxG4
