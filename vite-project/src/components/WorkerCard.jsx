@@ -15,19 +15,19 @@ function WorkerCard({ name, service, phone, description, birthday }) {
                 
                 <p className='card-text'>
                     <i className='bi bi-telephone-fill text-primary'></i> 
-                    <strong> Contact:</strong> {phone}
+                    <strong> Contato:</strong> {phone}
                 </p>
                 
                 <p className='card-text'>
                     <i className='bi bi-calendar-event text-warning'></i> 
-                    <strong> Birthday:</strong> {new Date(birthday).toLocaleDateString()}
+                    <strong> Data de nascimento:</strong> {new Date(birthday).toLocaleDateString()}
                 </p>
                 
                 {description && (
                     <div className='mt-3'>
                         <p className='card-text text-muted'>
                             <i className='bi bi-info-circle'></i> 
-                            <strong> About:</strong>
+                            <strong> Sobre:</strong>
                         </p>
                         <p className='card-text small'>{description}</p>
                     </div>
@@ -35,7 +35,7 @@ function WorkerCard({ name, service, phone, description, birthday }) {
             </div>
             <div className='card-footer bg-light'>
                 <button className='btn btn-outline-primary btn-sm w-100'>
-                    <i className='bi bi-chat-dots'></i> Contact Worker
+                    <i className='bi bi-chat-dots'></i> Contatar Trabalhador
                 </button>
             </div>
         </div>

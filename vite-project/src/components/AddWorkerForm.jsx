@@ -24,10 +24,10 @@ function AddWorkerForm({ onAddWorker, services }) {
         }
 
         // Validate services
-        if(!services.includes(formData.service.toLowerCase())){
-            alert('Invalid service type!');
-            invalidField.service = '';
-        }
+        // if(!services.includes(formData.service.toLowerCase())){
+        //     alert('Invalid service type!');
+        //     invalidField.service = '';
+        // }
 
         if(Object.keys(invalidField).length > 0){
             setFormData({...formData, ...invalidField});
@@ -60,7 +60,7 @@ function AddWorkerForm({ onAddWorker, services }) {
         <div className='card shadow'>
             <div className='card-header bg-success text-white d-flex justify-content-between align-items-center'>
                 <h4 className='mb-0'>
-                    <i className='bi bi-person-plus'></i> Add New Worker
+                    <i className='bi bi-person-plus'></i> Adicionar Novo Trabalhador
                 </h4>
                 <button 
                     className='btn btn-light btn-sm'
@@ -76,7 +76,7 @@ function AddWorkerForm({ onAddWorker, services }) {
                         <div className='row'>
                             {/* First Name */}
                             <div className='col-md-6 mb-3'>
-                                <label htmlFor='first_name' className='form-label'>First Name</label>
+                                <label htmlFor='first_name' className='form-label'>Primeiro Nome</label>
                                 <input 
                                     type="text"
                                     name='first_name' 
@@ -91,7 +91,7 @@ function AddWorkerForm({ onAddWorker, services }) {
 
                             {/* Last Name */}
                             <div className='col-md-6 mb-3'>
-                                <label htmlFor='last_name' className='form-label'>Last Name</label>
+                                <label htmlFor='last_name' className='form-label'>Segundo Nome</label>
                                 <input 
                                     type="text"
                                     name='last_name'
@@ -106,7 +106,7 @@ function AddWorkerForm({ onAddWorker, services }) {
 
                             {/* Service */}
                             <div className='col-md-6 mb-3'>
-                                <label htmlFor='service' className='form-label'>Service</label>
+                                <label htmlFor='service' className='form-label'>Serviço</label>
                                 <input 
                                     type="text"
                                     name='service'
@@ -121,7 +121,7 @@ function AddWorkerForm({ onAddWorker, services }) {
 
                             {/* Phone */}
                             <div className='col-md-6 mb-3'>
-                                <label htmlFor='phone' className='form-label'>Phone</label>
+                                <label htmlFor='phone' className='form-label'>Telefone</label>
                                 <input 
                                     type="tel"
                                     name='phone'
@@ -136,7 +136,7 @@ function AddWorkerForm({ onAddWorker, services }) {
 
                             {/* Gender */}
                             <div className='col-md-6 mb-3'>
-                                <label htmlFor='gender' className='form-label'>Gender</label>
+                                <label htmlFor='gender' className='form-label'>Gênero</label>
                                 <select
                                     name="gender"
                                     id='gender'
@@ -154,7 +154,7 @@ function AddWorkerForm({ onAddWorker, services }) {
 
                             {/* Date of Birth */}
                             <div className='col-md-6 mb-3'>
-                                <label htmlFor='date_of_birth' className='form-label'>Date of Birth</label>
+                                <label htmlFor='date_of_birth' className='form-label'>Data de nascimento</label>
                                 <input 
                                     type='date'
                                     name='date_of_birth'
@@ -168,7 +168,7 @@ function AddWorkerForm({ onAddWorker, services }) {
 
                             {/* Description */}
                             <div className='col-12 mb-3'>
-                                <label htmlFor='description' className='form-label'>Description (Optional)</label>
+                                <label htmlFor='description' className='form-label'>Descrição (Opcional)</label>
                                 <textarea 
                                     name='description'
                                     id='description'
@@ -184,7 +184,7 @@ function AddWorkerForm({ onAddWorker, services }) {
                         {/* Submit Button */}
                         <div className='d-grid'>
                             <button type='submit' className='btn btn-success btn-lg'>
-                                <i className='bi bi-check-circle'></i> Add Worker
+                                <i className='bi bi-check-circle'></i> Adicionar Trabalhador
                             </button>
                         </div>
                     </form>

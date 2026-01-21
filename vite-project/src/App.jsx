@@ -62,8 +62,8 @@ function App(){
         <div className='container-fluid bg-light min-vh-100 py-4'>
             {/* Header */}
             <div className='text-center mb-4'>
-                <h1 className='display-4 fw-bold text-primary'>Worker Platform</h1>
-                <p className='lead text-muted'>Find and hire the best professionals</p>
+                <h1 className='display-4 fw-bold text-primary'>Plataforma do Trabalhador</h1>
+                <p className='lead text-muted'>Contrate os melhores profissionais</p>
             </div>
 
             <div className='container'>
@@ -78,7 +78,7 @@ function App(){
                         <div className='row align-items-center'>
                             <div className='col-md-3'>
                                 <label htmlFor="filterService" className='form-label fw-bold'>
-                                    <i className='bi bi-funnel'></i> Filter by Service:
+                                    <i className='bi bi-funnel'></i> Filtre por Serviço:
                                 </label>
                             </div>
                             <div className='col-md-9'>
@@ -89,7 +89,7 @@ function App(){
                                     onChange={(event) => setSelectedService(event.target.value)}
                                     value={selectedService}
                                 >
-                                    <option value="all">All Services</option>
+                                    <option value="all">Todos os Serviços</option>
                                     {services.map((service) => (
                                         <option key={service} value={service}>{service}</option>
                                     ))}
@@ -104,9 +104,9 @@ function App(){
                     {loading && (
                         <div className='text-center py-5'>
                             <div className='spinner-border text-primary' role='status'>
-                                <span className='visually-hidden'>Loading...</span>
+                                <span className='visually-hidden'>Carregando...</span>
                             </div>
-                            <p className='mt-3 text-muted'>Loading workers...</p>
+                            <p className='mt-3 text-muted'>Carregando trabalhadores...</p>
                         </div>
                     )}
                     
@@ -118,14 +118,14 @@ function App(){
                     
                     {!loading && !error && filteredWorkers.length === 0 && (
                         <div className='alert alert-info text-center' role='alert'>
-                            <i className='bi bi-info-circle-fill'></i> No workers found for this service.
+                            <i className='bi bi-info-circle-fill'></i> Nenhum trabalhador encontrado para esse serviço.
                         </div>
                     )}
                     
                     {!loading && !error && filteredWorkers.length > 0 && (
                         <>
                             <h3 className='mb-3 text-secondary'>
-                                Available Workers 
+                                Trabalhadores disponíveis 
                                 <span className='badge bg-primary ms-2'>{filteredWorkers.length}</span>
                             </h3>
                             <div className='row'>
