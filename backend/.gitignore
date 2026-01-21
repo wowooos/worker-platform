@@ -3,3 +3,4 @@ node_modules/
 database/
 server_test.js
 test.js
+seed-data.js

@@ -2,13 +2,21 @@ const { Pool } = require('pg'); // importing the pool class from the [pg library
                                 // [Pool] is the thing that creates and manages our connection pool
 //----------------------------------------------------------------------------------------------------
 
-const pool = new Pool({         // creating ONE pool that will last the entire time our server runs; create usually 10 connections by default.
-    user: 'postgres',
-    host: 'localhost',
-    database: 'worker_platform',
-    password: '123',
-    port: 5432,
-    client_encoding: 'UTF8'
+// const pool = new Pool({         // creating ONE pool that will last the entire time our server runs; create usually 10 connections by default.
+//     user: 'postgres',
+//     host: 'localhost',
+//     database: 'worker_platform',
+//     password: '123',
+//     port: 5432,
+//     client_encoding: 'UTF8'
+// });
+
+// updating my backend config. to use Railway instead of localhost.
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false,  // Required for Railway
+    }
 });
 
 module.exports = pool;          // makes the [pool] available to other files
