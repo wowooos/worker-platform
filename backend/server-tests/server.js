@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');           // utility to help with file paths.
-const db = require('./db');
+const db = require('../db');
 const { type } = require('os');
 //--------------------------------------------------
 const app = express();
@@ -30,29 +30,29 @@ app.get('/workers', async (req, res) => {
     }
 });
 
-// GET by service
-app.get('/workers/service/:service', async(req, res) => {
+// GET by service -> ?
+// app.get('/workers/service/:service', async(req, res) => {
     
-    try{
-        const { service } = req.params;
-        const result = await db.query(`SELECT * FROM worker WHERE service=$1`,
-            [service]
-        );
+//     try{
+//         const { service } = req.params;
+//         const result = await db.query(`SELECT * FROM worker WHERE service=$1`,
+//             [service]
+//         );
 
-        if(result.rows.length > 0){
-            console.log(`[ > ] Requested service: ${service}`);
-            res.json(result.rows);
-        }else{
-            console.log(`${service.toUpperCase()} does not exist.`);
-            res.send(`${service.toUpperCase()} does not exist.`);
-        }
+//         if(result.rows.length > 0){
+//             console.log(`[ > ] Requested service: ${service}`);
+//             res.json(result.rows);
+//         }else{
+//             console.log(`${service.toUpperCase()} does not exist.`);
+//             res.send(`${service.toUpperCase()} does not exist.`);
+//         }
 
 
-    }catch(error){
-        console.log(error);
-        res.status(500).json({error: 'Database error'});
-    }
-});
+//     }catch(error){
+//         console.log(error);
+//         res.status(500).json({error: 'Database error'});
+//     }
+// });
 
 // GET unique services
 app.get('/services', async (req, res) => {
@@ -69,7 +69,7 @@ app.get('/services', async (req, res) => {
 app.post('/workers', async (req, res) => {
 
     const result_test = req.body;
-    console.log(result_test);
+    console.log(result_test)
 
     try{
         const { first_name, last_name, service, phone, gender, date_of_birth, description } = req.body;

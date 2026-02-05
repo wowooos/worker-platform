@@ -19,8 +19,11 @@ function App(){
     const fetchWorkers = async () => {
         try {
             setLoading(true);
-            const response = await axios.get('http://localhost:5000/workers');
+            const response = await axios.get('http://localhost:5000/api/workers');
             setWorkers(response.data);
+            // response = giant object; response.data = list of objects
+            // console.log(response.data);
+            // console.log(response);
         } catch (error){
             console.error('Error fetching workers: ', error);
             setError('Failed to load workers. Refresh the page.');
@@ -31,7 +34,7 @@ function App(){
 
     const fetchServices = async () => {
         try{
-            const result = await axios.get('http://localhost:5000/services');
+            const result = await axios.get('http://localhost:5000/api/services');
             setServices(result.data.map((s) => s.service));
         }catch(error){
             console.error('Error fetching services: ', error);
@@ -40,7 +43,7 @@ function App(){
 
     const addWorker = async (newWorker) => {
         try{
-            const response = await axios.post('http://localhost:5000/workers',newWorker);
+            const response = await axios.post('http://localhost:5000/api/workers',newWorker);
             console.log(response.data);
             fetchWorkers();
         } catch(error) {    

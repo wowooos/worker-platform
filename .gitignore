@@ -1,7 +1,2 @@
-checkpoints.txt
-notes-backend.txt
-notes-frontend.txt
-notes-postgres.txt
-notes-postgresq-and-server-connection.txt
-todo.txt
 public/
+txt/

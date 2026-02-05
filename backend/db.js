@@ -1,4 +1,5 @@
-const { Pool } = require('pg'); // importing the pool class from the [pg library]
+// const { Pool } = require('pg'); // importing the pool class from the [pg library]
+import { Pool } from 'pg';
                                 // [Pool] is the thing that creates and manages our connection pool
 //----------------------------------------------------------------------------------------------------
 
@@ -19,7 +20,8 @@ const pool = new Pool({
     }
 });
 
-module.exports = pool;          // makes the [pool] available to other files
+// module.exports = pool;          // makes the [pool] available to other files
+export default pool;
 
 /** What's a pool?
 
