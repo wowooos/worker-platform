@@ -5,6 +5,8 @@ import { useEffect } from 'react';
 import WorkerCard from './components/WorkerCard';
 import AddWorkerForm from './components/AddWorkerForm';
 
+import * as service from './services/api.js';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
@@ -19,7 +21,8 @@ function App(){
     const fetchWorkers = async () => {
         try {
             setLoading(true);
-            const response = await axios.get('http://localhost:5000/api/workers');
+            // const response = await axios.get('http://localhost:5000/api/workers');
+            const response = await service.fetchWorkers();
             setWorkers(response.data);
             // response = giant object; response.data = list of objects
             // console.log(response.data);
