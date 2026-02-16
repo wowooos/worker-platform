@@ -1,10 +1,10 @@
-import db from '../../db.js'
+import db from '../config/db.js'
 
 export const findAll = async () => {
     // query para o BD
     const workers = await db.query('SELECT * FROM worker');
     // console.log(workers);
-    console.log(workers.rows);
+    // console.log(workers.rows);
     return workers.rows;
 };
 
