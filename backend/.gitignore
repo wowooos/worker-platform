@@ -1,5 +1,5 @@
 database/
 node_modules/
-server-test/
+server-tests/
 .env
 seed-data.js
