@@ -3,3 +3,4 @@ node_modules/
 server-tests/
 .env
 seed-data.js
+src/config/db_individual_variables.js
