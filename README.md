@@ -1,7 +1,7 @@
 # Service Marketplace MVP 
 
 ## 🔹 Project Overview
-**Service Marketplace** is a fullstack MVP built with React, Node.js/Express, and PostgreSQL. It connects self-employed workers with potential clients — workers can register their services, and clients can browse and filter providers by service type.
+**Service Marketplace** is a fullstack MVP built with React, Node.js/Express, and PostgreSQL. Originally developed as part of a college extension project, it connects self-employed workers with potential clients — workers can register their services, and clients can browse and filter providers by service type.
 
 The project was built as a personal portfolio piece to practice fullstack development with a layered backend architecture (Routes → Controllers → Services → Repositories). It is currently local-only, with deployment and additional features planned for future iterations.
 
