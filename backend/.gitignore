@@ -2,5 +2,6 @@ database/
 node_modules/
 server-tests/
 .env
-seed-data.js
+# seed-data.js
 src/config/db_individual_variables.js
+test_database_connection_and_check_tables.js
